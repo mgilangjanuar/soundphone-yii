@@ -15,13 +15,6 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2-debug": "~2.0.0",
-        "yiisoft/yii2-gii": "~2.0.0",
-        "yiisoft/yii2-faker": "~2.0.0",
-
-        "codeception/base": "^2.2.3",
-        "codeception/verify": "~0.3.1",
-        "codeception/specify": "~0.4.3",
         "yiisoft/yii2": "~2.0.5",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
@@ -41,12 +34,22 @@
         "eventviva/php-image-resize": "*",
         "kartik-v/yii2-social": "*"
     },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3"
+    },
     "config": {
         "process-timeout": 1800
     },
     "scripts": {
         "post-install-cmd": [
-            "cp environments/config/db.php config/db.php"
+            "cp environments/config/db.php config/db.php",
+            "composer install --dev"
         ],
         "post-create-project-cmd": [
             "yii\\composer\\Installer::postCreateProject"
