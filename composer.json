@@ -47,6 +47,9 @@
         "process-timeout": 1800
     },
     "scripts": {
+        "pre-install-cmd": [
+            "cp environments/config/db.php config/db.php"
+        ],
         "post-create-project-cmd": [
             "yii\\composer\\Installer::postCreateProject"
         ]
