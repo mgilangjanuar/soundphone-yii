@@ -16,9 +16,6 @@ install:
   - travis_retry composer global require "fxp/composer-asset-plugin:~1.1.1"
   - travis_retry composer update --dev --prefer-dist --no-interaction
 # setup application:
+  - cp environments/config/db.php config/db.php
   - |
     sed -i "s/'cookieValidationKey' => ''/'cookieValidationKey' => 'testkey'/" config/web.php
-script:
-  - |
-    php -S localhost:8080 -t web > /dev/null 2>&1 &
-    vendor/bin/codecept run
