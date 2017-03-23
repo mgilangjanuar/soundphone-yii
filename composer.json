@@ -32,9 +32,8 @@
         "maxmirazh33/yii2-uploadable-cropable-image": "*",
         "kartik-v/yii2-widget-fileinput": "*",
         "eventviva/php-image-resize": "*",
-        "kartik-v/yii2-social": "*"
-    },
-    "require-dev": {
+        "kartik-v/yii2-social": "*",
+
         "yiisoft/yii2-debug": "~2.0.0",
         "yiisoft/yii2-gii": "~2.0.0",
         "yiisoft/yii2-faker": "~2.0.0",
@@ -47,9 +46,11 @@
         "process-timeout": 1800
     },
     "scripts": {
+        "pre-install-cmd": [
+            "composer global require \"fxp/composer-asset-plugin:^1.2.0\""
+        ],
         "post-install-cmd": [
-            "cp environments/config/db.php config/db.php",
-            "composer install --dev"
+            "cp environments/config/db.php config/db.php"
         ],
         "post-create-project-cmd": [
             "yii\\composer\\Installer::postCreateProject"
