@@ -8,6 +8,8 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\ServiceCenter;
+use app\models\Store;
 
 class SiteController extends Controller
 {
@@ -95,32 +97,41 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
-    /**
-     * Displays contact page.
-     *
-     * @return string
-     */
-    public function actionContact()
+    public function actionAboutUs()
     {
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
-
             return $this->refresh();
         }
-        return $this->render('contact', [
+        return $this->render('about-us', [
             'model' => $model,
         ]);
     }
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
+    public function actionProduct()
     {
-        return $this->render('about');
+        return $this->render('product');
+    }
+
+    public function actionProductDetail($id)
+    {
+        return $this->render('product-detail');
+    }
+
+    public function actionStore()
+    {
+        return $this->render('store');
+    }
+
+    public function actionServiceCenter()
+    {
+        return $this->render('service-center');
+    }
+
+    public function actionFaq()
+    {
+        return $this->render('faq');
     }
 
     public function actionCreatePass($pass)

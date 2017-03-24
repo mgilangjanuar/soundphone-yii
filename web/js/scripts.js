@@ -53,6 +53,9 @@ $(document).ready(function(){
         $('body .wrap .main-content').hover(function () {
             $('.product.flickity').css('display', 'none')
         })
+        $('body footer').hover(function () {
+            $('.product.flickity').css('display', 'none')
+        })
         $('.navbar-inverse .navbar-nav li a:not(#menu-product)').hover(function () {
             $('.product.flickity').css('display', 'none')
         })
@@ -64,5 +67,34 @@ $(document).ready(function(){
                 $('.navbar-inverse').css('background-color', 'transparent')
             }
         })
+    }
+
+    if ($('.logo-black').length) {
+        var l = window.location
+        var base_url = l.protocol + "//" + l.host + "/" + l.pathname.split('/')[1]
+        $('.navbar-brand img').attr('src', base_url + '/web/img/logo hitam.png')
+        $('.navbar-inverse').css('background-color', '#eff3f4')
+        $(window).scroll(function(){
+            $('.navbar-inverse').css('background-color', '#eff3f4')
+        })
+    }
+
+    if ($('.wrap-padding-top').length) {
+        $('.wrap > .main-content').css('padding-top', '95px')
+    }
+
+    $('.btn-tab-history').click(function (e) {
+        e.preventDefault()
+        $('.btn-img-history').removeClass('hide')
+        $('.btn-img-contact-us').addClass('hide')
+    })
+    $('.btn-tab-contact-us').click(function (e) {
+        e.preventDefault()
+        $('.btn-img-history').addClass('hide')
+        $('.btn-img-contact-us').removeClass('hide')
+    })
+
+    if ($('.contact-us-form').length) {
+        // $('.contact-us-form').css('top', $('.btn-img-contact-us').position().top + ($(window).height() / 2) - 140)
     }
 })

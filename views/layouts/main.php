@@ -36,13 +36,13 @@ AppAsset::register($this);
     <?= Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About Us', 'url' => ['/site/about']],
-            ['label' => 'Product', 'url' => ['/site/about'], 'linkOptions' => ['id' => 'menu-product']],
-            ['label' => 'Store', 'url' => ['/site/contact']],
-            ['label' => 'Service Center', 'url' => ['/site/contact']],
-            ['label' => 'News', 'url' => ['/site/contact']],
-            ['label' => 'FAQ', 'url' => ['/site/contact']],
+            ['label' => 'Home', 'url' => ['#']],
+            ['label' => 'About Us', 'url' => ['#']],
+            ['label' => 'Product', 'url' => ['#'], 'linkOptions' => ['id' => 'menu-product']],
+            ['label' => 'Store', 'url' => ['#']],
+            ['label' => 'Service Center', 'url' => ['#']],
+            ['label' => 'News', 'url' => ['#']],
+            ['label' => 'FAQ', 'url' => ['#']],
         ],
     ]) ?>
     <?php NavBar::end() ?>

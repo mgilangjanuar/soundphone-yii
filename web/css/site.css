@@ -50,12 +50,18 @@ b {
     font-family: MyriadSemiboldSemiExt;
 }
 
-h1, h2, h3 {
+h1, h2, h3,
+.h1, .h2, .h3 {
     font-family: MyriadLightSemiExt;
 }
 
-h4, h5, h6 {
+h4, h5, h6,
+.h4, .h5, .h6 {
     font-family: MyriadSemiboldSemiExt;
+}
+
+p.lead, p.lead * {
+    font-size: 26px;
 }
 
 .wrap {
@@ -213,6 +219,7 @@ a.desc:after {
 
 .navbar-toggle {
     margin-top: 26px;
+    background-color: #333;
 }
 
 .nav li > form > button.logout {
@@ -348,6 +355,34 @@ a.desc:after {
     background: #d8d9d9;
     margin: 0 auto;
     margin-top: 10px;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+.contact-us-form {
+    width: 100%;
+    max-width: 330px;
+    padding: 50px;
+    position: absolute;
+    left: 50%;
+    margin-top: -440px;
+    transform: translate(-50%, 0);
+}
+
+.contact-us-form form .form-control {
+    border: none;
+    background: transparent;
+    border-radius: initial;
+    border-bottom: solid 2px #9e9e9e;
+}
+
+.contact-us-form form .form-control:focus {
+    border: none;
+    background: transparent;
+    border-radius: initial;
+    border-bottom: solid 2px #00aeef;
 }
 
 @media(max-width:767px) {
