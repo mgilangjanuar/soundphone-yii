@@ -87,14 +87,13 @@ $(document).ready(function(){
         e.preventDefault()
         $('.btn-img-history').removeClass('hide')
         $('.btn-img-contact-us').addClass('hide')
+        $('.contact-us-form').addClass('hide')
     })
     $('.btn-tab-contact-us').click(function (e) {
         e.preventDefault()
         $('.btn-img-history').addClass('hide')
         $('.btn-img-contact-us').removeClass('hide')
+        $('.contact-us-form').removeClass('hide')
     })
 
-    if ($('.contact-us-form').length) {
-        // $('.contact-us-form').css('top', $('.btn-img-contact-us').position().top + ($(window).height() / 2) - 140)
-    }
 })

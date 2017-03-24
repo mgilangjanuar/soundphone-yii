@@ -36,8 +36,8 @@ AppAsset::register($this);
     <?= Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['#']],
-            ['label' => 'About Us', 'url' => ['#']],
+            ['label' => 'Home', 'url' => ['/site']],
+            ['label' => 'About Us', 'url' => ['/site/about-us']],
             ['label' => 'Product', 'url' => ['#'], 'linkOptions' => ['id' => 'menu-product']],
             ['label' => 'Store', 'url' => ['#']],
             ['label' => 'Service Center', 'url' => ['#']],

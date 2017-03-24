@@ -58,9 +58,9 @@ $this->title = 'About';
 
         <div>
             <p>
-                <?= Html::img('@web/web/img/hp-contact-us-frame.png', ['class' => 'img-responsive img-center btn-img-contact-us']) ?>
+                <?= Html::img('@web/web/img/hp-contact-us-frame.png', ['class' => 'img-responsive img-center btn-img-contact-us hide']) ?>
             </p>
-            <div class="contact-us-form">
+            <div class="contact-us-form hide">
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
                     <?= $form->field($model, 'name')->textInput(['placeholder' => 'Name'])->label(false)->error(false) ?>
