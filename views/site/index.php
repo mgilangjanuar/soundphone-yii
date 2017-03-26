@@ -36,7 +36,7 @@ $this->registerJsFile('@web/web/libs/jquery.bxslider/jquery.bxslider.min.js', ['
                         <?= Html::img('@web/web/img/hp2.png', ['class' => 'img-responsive img-product']) ?>
                     </p>
                     <br />
-                    <p class="text-center"><a class="btn btn-secondary" href="#">Learn More</a></p>
+                    <p class="text-center"><a class="btn btn-secondary" href="<?= Url::to(['/site/product-detail', 'id' => 'j2']) ?>">Learn More</a></p>
                     <br /><br />
                 </div>
                 <div class="col-md-4">
@@ -47,7 +47,7 @@ $this->registerJsFile('@web/web/libs/jquery.bxslider/jquery.bxslider.min.js', ['
                         <?= Html::img('@web/web/img/hp1.png', ['class' => 'img-responsive img-product']) ?>
                     </p>
                     <br />
-                    <p class="text-center"><a class="btn btn-secondary" href="#">Learn More</a></p>
+                    <p class="text-center"><a class="btn btn-secondary" href="<?= Url::to(['/site/product-detail', 'id' => 's1']) ?>">Learn More</a></p>
                     <br /><br />
                 </div>
                 <div class="col-md-4">
@@ -58,7 +58,7 @@ $this->registerJsFile('@web/web/libs/jquery.bxslider/jquery.bxslider.min.js', ['
                         <?= Html::img('@web/web/img/hp3.png', ['class' => 'img-responsive img-product']) ?>
                     </p>
                     <br />
-                    <p class="text-center"><a class="btn btn-secondary" href="#">Learn More</a></p>
+                    <p class="text-center"><a class="btn btn-secondary" href="<?= Url::to(['/site/product-detail', 'id' => 's2']) ?>">Learn More</a></p>
                     <br /><br />
                 </div>
             </div>
