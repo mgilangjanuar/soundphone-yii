@@ -24,13 +24,19 @@ $(document).ready(function(){
             pageDots: false,
             // groupCells: 3
         });
+        $('.default.flickity').flickity({
+            cellAlign: 'left',
+            contain: true,
+            pageDots: false,
+            // groupCells: 3
+        });
     }
 
     $('.product.flickity').css('display', 'none')
 
     $('.navbar-toggle').click(function () {
         $('.product.flickity').css('display', 'none')
-        $('.navbar-inverse').css('background-color', '#222')
+        // $('.navbar-inverse').css('background-color', '#222')
     })
 
 

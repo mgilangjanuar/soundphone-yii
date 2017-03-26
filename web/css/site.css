@@ -60,8 +60,12 @@ h4, h5, h6,
     font-family: MyriadSemiboldSemiExt;
 }
 
+p {
+    font-size: 16px;
+}
+
 p.lead, p.lead * {
-    font-size: 26px;
+    font-size: 24px;
 }
 
 .wrap {
@@ -118,6 +122,10 @@ p.lead, p.lead * {
 
 .white {
     color: #ffffff;
+}
+
+.black {
+    color: #000000;
 }
 
 .cyan {
@@ -239,7 +247,7 @@ a.desc:after {
 .navbar-inverse .navbar-nav > li > a:hover {
     background: transparent;
     color: #003471;
-    border-bottom: solid #003471 2px;
+    border-bottom: solid #003471 1px;
 }
 
 .bx-wrapper {
@@ -305,7 +313,8 @@ a.desc:after {
     fill: #2173af !important;
 }
 
-.product.flickity .caption {
+.product.flickity .caption,
+.default.flickity .caption {
     margin-top: 30px;
 }
 
@@ -315,7 +324,8 @@ a.desc:after {
     z-index: 9999;
 }
 
-.product .flickity-cell {
+.product.flickity .flickity-cell,
+.default.flickity .flickity-cell {
     width: 33.34%;
 }
 
@@ -338,6 +348,11 @@ a.desc:after {
     text-transform: uppercase;
     font-size: 12px;
     padding: 6px 17px;
+}
+
+.btn.btn-secondary:hover {
+    color: #fff;
+    background-color: #03afef;
 }
 
 .img-product {
@@ -385,6 +400,16 @@ a.desc:after {
     border-bottom: solid 2px #00aeef;
 }
 
+.product-overview {
+    margin-top: 300px;
+}
+
+.product-img.right {
+    position: absolute;
+    right: 0;
+    margin-top: -200px;
+}
+
 @media(max-width:767px) {
     .nav li > form > button.logout {
         display:block;
@@ -409,13 +434,15 @@ a.desc:after {
         padding-top: 23px;
     }
 
-    .product .flickity-cell {
+    .flickity.product .flickity-cell,
+    .flickity.default .flickity-cell {
         width: 60%;
     }
 }
 
 @media(max-width:540px) {
-    .product .flickity-cell {
+    .flickity.product .flickity-cell,
+    .flickity.default .flickity-cell {
         width: 100%;
     }
 }

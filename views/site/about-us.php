@@ -5,7 +5,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'About';
+$this->title = 'About Us';
 ?>
 <div class="site-about logo-black wrap-padding-top">
     <div class="container">
@@ -44,7 +44,7 @@ $this->title = 'About';
         <div>
             <p class="with-underline text-center lead">
                 <?= Html::a('<span class="cyan">History</span>', ['#'], ['class' => 'btn h2 btn-tab-history']) ?>
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp;
                 <?= Html::a('<span class="cyan">Contact Us</span>', ['#'], ['class' => 'btn h2 btn-tab-contact-us']) ?>
             </p>
             <br />
@@ -74,7 +74,7 @@ $this->title = 'About';
                     <?= $form->field($model, 'body')->textInput(['placeholder' => 'Message'])->label(false)->error(false) ?>
                     
                     <div class="form-group text-center">
-                        <?= Html::submitButton('Send', ['class' => 'btn btn-secondary', 'name' => 'contact-button']) ?>
+                        <?= Html::submitButton('<span class="white">&nbsp; &nbsp; Send &nbsp; &nbsp;</span>', ['class' => 'btn btn-secondary', 'name' => 'contact-button']) ?>
                     </div>
 
                 <?php ActiveForm::end(); ?>
