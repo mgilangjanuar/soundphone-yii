@@ -4,6 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -51,7 +52,7 @@ AppAsset::register($this);
         <div class="flickity product">
             <div class="flickity-cell">
                 <div class="container-fluid text-center">
-                    <a href="#">
+                    <a href="<?= Url::to(['/site/product-detail', 'id' => 'j2']) ?>">
                         <?= Html::img('@web/web/img/hp2 2.png', ['img-responsive']) ?>
                         <p class="caption">
                             <b><span class="white">SOUNDPHONE</span> <span class="cyan">J2</span></b>

@@ -116,7 +116,13 @@ class SiteController extends Controller
 
     public function actionProductDetail($id)
     {
-        return $this->render('product-detail');
+        if ($id == 'j2') {
+            return $this->render('product-j2');
+        } elseif ($id == 's1') {
+            return $this->render('product-s1');
+        } elseif ($id == 's2') {
+            return $this->render('product-s2');
+        }
     }
 
     public function actionStore()

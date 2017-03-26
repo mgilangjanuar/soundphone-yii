@@ -410,6 +410,17 @@ a.desc:after {
     margin-top: -200px;
 }
 
+div.j2 .section-1 {
+    background: url('../img/j2-section-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.big-padding-top-bottom {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 @media(max-width:767px) {
     .nav li > form > button.logout {
         display:block;

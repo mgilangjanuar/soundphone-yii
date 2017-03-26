@@ -3,12 +3,11 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = 'Product';
 ?>
 <div class="site-product logo-black wrap-padding-top">
-    
-    <br /><br /><br />
     
     <div class="container">
         <div class="flickity default">
@@ -24,7 +23,7 @@ $this->title = 'Product';
                         Lorem impsum
                     </p>
                     <p class="text-center">
-                        <p class="text-center"><a class="btn btn-secondary" href="#">Learn More</a></p>
+                        <p class="text-center"><a class="btn btn-secondary" href="<?= Url::to(['/site/product-detail', 'id' => 'j2']) ?>">Learn More</a></p>
                     </p>
                 </div>
             </div>

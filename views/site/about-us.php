@@ -11,7 +11,6 @@ $this->title = 'About Us';
     <div class="container">
 
         <div>
-            <br /><br /><br /><br /><br />
             <p>
                 <?= Html::img('@web/web/img/logo-big.png', ['class' => 'img-responsive img-center']) ?>
             </p>

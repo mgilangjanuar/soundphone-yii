@@ -86,7 +86,7 @@ $(document).ready(function(){
     }
 
     if ($('.wrap-padding-top').length) {
-        $('.wrap > .main-content').css('padding-top', '95px')
+        $('.wrap > .main-content').css('padding-top', '140px')
     }
 
     $('.btn-tab-history').click(function (e) {
