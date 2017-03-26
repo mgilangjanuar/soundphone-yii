@@ -427,6 +427,12 @@ div.s1 .section-1 {
     background-size: cover;
 }
 
+div.s2 .section-1 {
+    background: url('../img/s2-section-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media(max-width:767px) {
     .nav li > form > button.logout {
         display:block;

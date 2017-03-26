@@ -72,7 +72,7 @@ AppAsset::register($this);
             </div>
             <div class="flickity-cell">
                 <div class="container-fluid text-center">
-                    <a href="#">
+                    <a href="<?= Url::to(['/site/product-detail', 'id' => 's2']) ?>">
                         <?= Html::img('@web/web/img/hp3 2.png', ['img-responsive']) ?>
                         <p class="caption">
                             <b><span class="white">SOUNDPHONE</span> <span class="cyan">S2</span></b>
