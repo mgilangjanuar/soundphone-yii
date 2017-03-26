@@ -77,7 +77,10 @@ $(document).ready(function(){
 
     if ($('.logo-black').length) {
         var l = window.location
-        var base_url = l.protocol + "//" + l.host + "/" + l.pathname.split('/')[1]
+        var base_url = l.protocol + "//" + l.host
+        if (base_url == 'http://localhost') {
+             base_url = base_url + "/" + l.pathname.split('/')[1]
+        }
         $('.navbar-brand img').attr('src', base_url + '/web/img/logo hitam.png')
         $('.navbar-inverse').css('background-color', '#eff3f4')
         $(window).scroll(function(){
