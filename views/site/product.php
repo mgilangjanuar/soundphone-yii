@@ -39,7 +39,7 @@ $this->title = 'Product';
                         Lorem impsum
                     </p>
                     <p class="text-center">
-                        <p class="text-center"><a class="btn btn-secondary" href="#">Learn More</a></p>
+                        <p class="text-center"><a class="btn btn-secondary" href="<?= Url::to(['/site/product-detail', 'id' => 's1']) ?>">Learn More</a></p>
                     </p>
                 </div>
             </div>
