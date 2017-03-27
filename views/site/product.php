@@ -6,6 +6,16 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 $this->title = 'Product';
+$this->registerCssFile('@web/web/libs/jQuery-Plugin-For-Product-Viewer-with-Image-Hover-Zoom-BZoom/css/style.css');
+$this->registerJsFile('@web/web/libs/jQuery-Plugin-For-Product-Viewer-with-Image-Hover-Zoom-BZoom/js/jqzoom.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerJs("
+    $('#bzoom').zoom({
+        zoom_area_width: 300,
+        autoplay_interval :3000,
+        small_thumbs : 0,
+        autoplay : false
+    });
+");
 ?>
 <div class="site-product logo-black wrap-padding-top">
     
@@ -71,10 +81,19 @@ $this->title = 'Product';
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 </p>
             </div>
-            <div class="product-img right">
-                <?= Html::img('@web/web/img/hp 1-overview.png', ['class' => 'img-responsive']) ?>
+            <div class="bzoom_wrap">
+                <ul id="bzoom">
+                    <li>
+                        <!-- <?= Html::img('@web/web/img/hp 1-overview.png', ['class' => 'bzoom_thumb_image', 'title' => 'first img']) ?>
+                        <?= Html::img('@web/web/img/hp 1-overview.png', ['class' => 'bzoom_big_image']) ?> -->
+                        <img class="bzoom_thumb_image" src="<?= Yii::getALias('@web/web/img/hp 1-overview.png') ?>" title="first img" />
+                        <img class="bzoom_big_image" src="<?= Yii::getALias('@web/web/img/hp 1-overview.png') ?>"/>
+                    </li>
+                </ul>
             </div>
         </div>
+
+
     </div>
 
 </div>
