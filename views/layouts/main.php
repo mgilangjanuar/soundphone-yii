@@ -43,7 +43,7 @@ AppAsset::register($this);
             ['label' => 'Store', 'url' => ['#']],
             ['label' => 'Service Center', 'url' => ['#']],
             ['label' => 'News', 'url' => ['#']],
-            ['label' => 'FAQ', 'url' => ['#']],
+            ['label' => 'FAQ', 'url' => ['/site/faq']],
         ],
     ]) ?>
     <?php NavBar::end() ?>
