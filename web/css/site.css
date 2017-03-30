@@ -47,7 +47,7 @@ body {
 }
 
 b {
-    font-family: MyriadSemiboldSemiExt;
+    font-family: MyriadRegular;
 }
 
 h1, h2, h3,
@@ -341,7 +341,7 @@ a.desc:after {
     color: #004d89;
     background-color: transparent;
     border-color: #03afef;
-    font-family: MyriadBold;
+    font-family: MyriadRegular;
     border-radius: 100px;
     border-width: 3px;
     box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);

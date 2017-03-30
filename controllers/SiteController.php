@@ -116,12 +116,23 @@ class SiteController extends Controller
 
     public function actionProductDetail($id)
     {
+        $model = new ContactForm();
+        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
+            Yii::$app->session->setFlash('contactFormSubmitted');
+            return $this->refresh();
+        }
         if ($id == 'j2') {
-            return $this->render('product-j2');
+            return $this->render('product-j2', [
+                'model' => $model
+            ]);
         } elseif ($id == 's1') {
-            return $this->render('product-s1');
+            return $this->render('product-s1', [
+                'model' => $model
+            ]);
         } elseif ($id == 's2') {
-            return $this->render('product-s2');
+            return $this->render('product-s2', [
+                'model' => $model
+            ]);
         }
     }
 

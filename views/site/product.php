@@ -84,10 +84,8 @@ $this->registerJs("
             <div class="bzoom_wrap">
                 <ul id="bzoom">
                     <li>
-                        <!-- <?= Html::img('@web/web/img/hp 1-overview.png', ['class' => 'bzoom_thumb_image', 'title' => 'first img']) ?>
-                        <?= Html::img('@web/web/img/hp 1-overview.png', ['class' => 'bzoom_big_image']) ?> -->
-                        <img class="bzoom_thumb_image" src="<?= Yii::getALias('@web/web/img/hp 1-overview.png') ?>" title="first img" />
-                        <img class="bzoom_big_image" src="<?= Yii::getALias('@web/web/img/hp 1-overview.png') ?>"/>
+                        <?= Html::img('@web/web/img/hp 1-overview.png', ['class' => 'bzoom_thumb_image', 'title' => 'first img']) ?>
+                        <?= Html::img('@web/web/img/hp 1-overview.png', ['class' => 'bzoom_big_image']) ?>
                     </li>
                 </ul>
             </div>

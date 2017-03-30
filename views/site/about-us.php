@@ -11,10 +11,11 @@ $this->title = 'About Us';
     <div class="container">
 
         <div>
+            <br /><br />
             <p>
                 <?= Html::img('@web/web/img/logo-big.png', ['class' => 'img-responsive img-center']) ?>
             </p>
-            <br /><br />
+            <br /><br /><br /><br />
         </div>
 
         <div>
@@ -37,22 +38,28 @@ $this->title = 'About Us';
             <p class="text-justify">
                 In 2015, Blaupunk launch its first Soundphone in Indonesia.
             </p>
-            <br /><br /><br />
+            <br /><br />
         </div>
 
         <div>
             <p class="with-underline text-center lead">
-                <?= Html::a('<span class="cyan">History</span>', ['#'], ['class' => 'btn h2 btn-tab-history']) ?>
-                &nbsp; &nbsp; &nbsp;
-                <?= Html::a('<span class="cyan">Contact Us</span>', ['#'], ['class' => 'btn h2 btn-tab-contact-us']) ?>
+                <?= Html::a('<span class="cyan">History</span>', '#', ['class' => 'btn h2 btn-tab-history']) ?>
             </p>
             <br />
         </div>
 
         <div>
             <p>
-                <?= Html::img('@web/web/img/history.png', ['class' => 'img-responsive img-center btn-img-history hide']) ?>
+                <?= Html::img('@web/web/img/history.png', ['class' => 'img-responsive img-center btn-img-history']) ?>
             </p>
+            <br /><br />
+        </div>
+
+        <div>
+            <p class="with-underline text-center lead">
+                <?= Html::a('<span class="cyan">Contact Us</span>', ['#'], ['class' => 'btn h2 btn-tab-contact-us']) ?>
+            </p>
+            <br />
         </div>
 
         <div>
