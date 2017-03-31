@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
+use yii\db\Query;
 
 /**
  * This is the model class for table "service_center".
@@ -44,5 +46,11 @@ class ServiceCenter extends \yii\db\ActiveRecord
             'state' => 'State',
             'address' => 'Address',
         ];
+    }
+
+    public static function getDataState()
+    {
+        $array = ServiceCenter::find()->orderBy('state')->asArray()->all();
+        return ArrayHelper::map($array, 'state', 'state');
     }
 }

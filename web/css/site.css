@@ -433,6 +433,16 @@ div.s2 .section-1 {
     background-size: cover;
 }
 
+.filter-form {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #004d89;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
 @media(max-width:767px) {
     .nav li > form > button.logout {
         display:block;

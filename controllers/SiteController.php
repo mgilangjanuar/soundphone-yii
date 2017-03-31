@@ -138,12 +138,22 @@ class SiteController extends Controller
 
     public function actionStore()
     {
-        return $this->render('store');
+        return $this->render('store', [
+            'models' => Store::find()->all()
+        ]);
     }
 
     public function actionServiceCenter()
     {
-        return $this->render('service-center');
+        if ($state = Yii::$app->request->get('state')) {
+            $models = ServiceCenter::find()->where(['state' => $state])->all();
+        }
+        $models = ServiceCenter::find()->all();
+        
+        return $this->render('service-center', [
+            'states' => ServiceCenter::getDataState(),
+            'models' => $models
+        ]);
     }
 
     public function actionFaq()

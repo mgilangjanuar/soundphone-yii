@@ -105,4 +105,8 @@ $(document).ready(function(){
         $('.contact-us-form').toggleClass('hide')
     })
 
+    $('.filter-form select').change(function () {
+        this.form.submit()
+    })
+
 })
