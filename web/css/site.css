@@ -341,7 +341,7 @@ a.desc:after {
     color: #004d89;
     background-color: transparent;
     border-color: #03afef;
-    font-family: MyriadRegular;
+    font-family: MyriadSemiboldSemiExt;
     border-radius: 100px;
     border-width: 3px;
     box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
@@ -441,6 +441,10 @@ div.s2 .section-1 {
 
 .img-responsive {
     width: 100%;
+}
+
+.well {
+    background: #E4E8EC;
 }
 
 @media(max-width:767px) {

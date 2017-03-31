@@ -145,13 +145,14 @@ class SiteController extends Controller
 
     public function actionServiceCenter()
     {
+        $models = ServiceCenter::find()->all();
         if ($state = Yii::$app->request->get('state')) {
             $models = ServiceCenter::find()->where(['state' => $state])->all();
         }
-        $models = ServiceCenter::find()->all();
-        
+
         return $this->render('service-center', [
             'states' => ServiceCenter::getDataState(),
+            'locations' => ServiceCenter::getLocations(Yii::$app->request->get('state')),
             'models' => $models
         ]);
     }

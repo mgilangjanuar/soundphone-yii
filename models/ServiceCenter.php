@@ -53,4 +53,20 @@ class ServiceCenter extends \yii\db\ActiveRecord
         $array = ServiceCenter::find()->orderBy('state')->asArray()->all();
         return ArrayHelper::map($array, 'state', 'state');
     }
+
+    public static function getLocations($state = null)
+    {
+        $results = [];
+        $query = $state ? ServiceCenter::find()->where(['state' => $state])->all() : ServiceCenter::find()->all();
+        foreach ($query as $model) {
+            $results[] = [
+                'location' => [
+                    'address' => $model->address,
+                    'country' => 'Indonesia',
+                ],
+                'htmlContent' => '<p>'.$model->address.'</p>'
+            ];
+        }
+        return $results;
+    }
 }
