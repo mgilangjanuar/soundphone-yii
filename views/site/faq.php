@@ -7,7 +7,7 @@ $this->title = 'FAQ';
 
 <div class="site-faq">
 
-    <?= Html::img('@web/web/img/banner 1.png', ['class' => 'img-responsive img-center']) ?>
+    <?= Html::img('@web/web/img/banner 1.png', ['class' => 'img-responsive img-full']) ?>
 
     <br /><br /><br />
     <div class="container">
