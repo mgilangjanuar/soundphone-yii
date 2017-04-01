@@ -33,6 +33,7 @@ $this->registerCss("
 
     <br /><br /><br />
     <div class="container text-center">
+        Filter by City: &nbsp; &nbsp;
         <?= Html::a('All &nbsp <i class="fa fa-times"></i>', ['/site/store'], ['style' => 'margin:3px', 'class' => ($model->state ? 'btn btn-secondary' : 'btn btn-alternate')]) ?>
         <?php foreach ($states as $state): ?>
             <?= Html::a($state, ['/site/store', 'SearchStoreForm[state]' => $state], ['style' => 'margin:3px', 'class' => ($model->state == $state ? 'btn btn-alternate' : 'btn btn-secondary')]) ?>
