@@ -69,8 +69,15 @@ $this->registerJs("
                     </p>
                 </div>
             </div>
-        </div>        
+        </div> 
+    </div>
 
+    <div class="pull-right">
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <?= Html::img('@web/web/img/hp 1-overview.png') ?>
+    </div>       
+
+    <div class="container">
         <div class="row product-overview">
             <div class="col-sm-6">
                 <?= Html::img('@web/web/img/Shape 1.png') ?>
@@ -81,7 +88,7 @@ $this->registerJs("
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 </p>
             </div>
-            <div class="bzoom_wrap">
+            <div class="bzoom_wrap hide">
                 <ul id="bzoom">
                     <li>
                         <?= Html::img('@web/web/img/hp 1-overview.png', ['class' => 'bzoom_thumb_image', 'title' => 'first img']) ?>
@@ -90,8 +97,6 @@ $this->registerJs("
                 </ul>
             </div>
         </div>
-
-
     </div>
 
 </div>

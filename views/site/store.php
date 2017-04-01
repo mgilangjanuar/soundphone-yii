@@ -13,7 +13,7 @@ $this->registerCss("
 
 <div class="site-store">
 
-    <?= Html::img('@web/web/img/banner 3.png', ['class' => 'img-responsive img-center']) ?>
+    <?= Html::img('@web/web/img/banner 3.png', ['class' => 'img-responsive img-center img-full']) ?>
 
     <div class="filter-form">
         <div class="container">

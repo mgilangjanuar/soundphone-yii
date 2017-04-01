@@ -9,7 +9,7 @@ $this->title = 'Service Center';
 
 <div class="site-service-center">
 
-    <?= Html::img('@web/web/img/banner 2.png', ['class' => 'img-responsive img-center']) ?>
+    <?= Html::img('@web/web/img/banner 2.png', ['class' => 'img-responsive img-center img-full']) ?>
     
     <div class="filter-form">
         <div class="container">

@@ -132,6 +132,10 @@ p.lead, p.lead * {
     color: #0095d4;
 }
 
+.grey {
+    color: #999;
+}
+
 .jumbotron {
     text-align: center;
     background-color: transparent;
@@ -461,12 +465,50 @@ div.s2 .section-1 {
     background: #004d89;
 }
 
-.img-responsive {
+.img-full {
     width: 100%;
 }
 
 .well {
     background: #E4E8EC;
+}
+
+.panel.panel-default {
+    border-radius: 7px;
+}
+
+.panel.panel-default .panel-heading {
+    background: #03afef;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 7px 7px 0 0;
+}
+
+.panel.panel-primary {
+    border-color: #ddd;
+    border-radius: 0;
+}
+
+.panel.panel-primary .panel-heading {
+    border-radius: 0;
+    background: #fff;
+}
+
+.panel.panel-primary .panel-heading.panel-img {
+    padding: 0;
+    border-color: transparent;
+}
+
+.panel.panel-primary .panel-body {
+    padding: 20px 40px;
+}
+
+.panel.panel-primary .panel-footer {
+    background: #fff;
+    padding: 20px 40px;
 }
 
 @media(max-width:767px) {
