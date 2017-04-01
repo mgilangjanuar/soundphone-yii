@@ -61,7 +61,7 @@ class ServiceCenter extends \yii\db\ActiveRecord
         foreach ($query as $model) {
             $results[] = [
                 'location' => [
-                    'address' => $model->address,
+                    'address' => $model->address . ', ' . $model->state,
                     'country' => 'Indonesia',
                 ],
                 'htmlContent' => '<p>'.$model->address.'</p>'

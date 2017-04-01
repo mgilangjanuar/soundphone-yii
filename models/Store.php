@@ -63,7 +63,7 @@ class Store extends \yii\db\ActiveRecord
         foreach ($query as $model) {
             $results[] = [
                 'location' => [
-                    'address' => $model->address,
+                    'address' => $model->address . ', ' . $model->state . ', ' . $model->region,
                     'country' => 'Indonesia',
                 ],
                 'htmlContent' => '<h4>'.$model->name.'</h4><p>'.$model->address.'</p>'

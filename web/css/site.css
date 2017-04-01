@@ -373,6 +373,10 @@ a.desc:after {
     background-color: transparent;
 }
 
+.btn.btn-flat {
+    box-shadow: none;
+}
+
 .img-product {
     filter: drop-shadow(0 10px 5px rgba(0,0,0,0.25));
     margin: 0 auto;
