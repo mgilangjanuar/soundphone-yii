@@ -40,7 +40,7 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/site']],
             ['label' => 'About Us', 'url' => ['/site/about-us']],
             ['label' => 'Product', 'url' => ['/site/product'], 'linkOptions' => ['id' => 'menu-product']],
-            ['label' => 'Store', 'url' => ['#']],
+            ['label' => 'Store', 'url' => ['/site/store']],
             ['label' => 'Service Center', 'url' => ['/site/service-center']],
             ['label' => 'News', 'url' => ['#']],
             ['label' => 'FAQ', 'url' => ['/site/faq']],

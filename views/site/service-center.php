@@ -49,7 +49,7 @@ $this->title = 'Service Center';
                         <div class="cyan">
                             <h4><?= $model->state ?></h4>
                             <p>
-                                Address - <?= $model->address ?>
+                                <?= $model->address ?>
                             </p>
                         </div>
                     </div>

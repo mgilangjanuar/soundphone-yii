@@ -10,6 +10,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\ServiceCenter;
 use app\models\Store;
+use app\models\SearchStoreForm;
 
 class SiteController extends Controller
 {
@@ -138,8 +139,19 @@ class SiteController extends Controller
 
     public function actionStore()
     {
+        $models = Store::find()->all();
+        $model = new SearchStoreForm();
+        if ($model->load(Yii::$app->request->get())) {
+            $models = Store::find()
+                ->where(['like', 'name', $model->search])
+                ->orWhere(['like', 'address', $model->search])
+                ->orWhere(['like', 'state', $model->search])
+                ->orWhere(['like', 'region', $model->search])
+                ->all();
+        }
         return $this->render('store', [
-            'models' => Store::find()->all()
+            'models' => $models,
+            'model' => $model
         ]);
     }
 
