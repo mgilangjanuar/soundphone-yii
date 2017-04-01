@@ -14,7 +14,7 @@ $this->registerCss("
 <div class="site-store">
 
     <?= Html::img('@web/web/img/banner 3.png', ['class' => 'img-responsive img-center']) ?>
-    
+
     <div class="filter-form">
         <div class="container">
             <div class="row">
@@ -29,6 +29,59 @@ $this->registerCss("
                 </div>
             </div>
         </div>
+    </div>
+
+    <br /><br /><br />
+    <div class="container text-center">
+        <?= Html::a('All &nbsp <i class="fa fa-times"></i>', ['/site/store'], ['style' => 'margin:3px', 'class' => ($model->state ? 'btn btn-secondary' : 'btn btn-alternate')]) ?>
+        <?php foreach ($states as $state): ?>
+            <?= Html::a($state, ['/site/store', 'SearchStoreForm[state]' => $state], ['style' => 'margin:3px', 'class' => ($model->state == $state ? 'btn btn-alternate' : 'btn btn-secondary')]) ?>
+        <?php endforeach ?>
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <?= GoogleMaps::widget([
+            'userLocations' => $locations,
+        ]) ?>
+    </div>
+
+    <br /><br /><br />
+    <div class="container">
+        <?php foreach ($listGroupModels as $state => $listModels): ?>
+            <br />
+            <div>
+                <p>
+                    <?= Html::a('&nbsp; &nbsp; ' .$state. ' &nbsp; &nbsp;', ['/site/store', 'SearchStoreForm[state]' => $state], ['class' => 'btn btn-alternate']) ?>
+                </p>
+            </div>
+            <br />
+            <?php foreach ($listModels as $model): ?>
+                <div class="well well-sm">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="pull-left">
+                                <?= Html::img('@web/web/img/noun_33230_cc copy 2.png', ['style' => 'padding:9px 30px']) ?>
+                            </div>
+                            <div class="cyan">
+                                <h4><?= $model->name ?></h4>
+                                <p>
+                                    <?= $model->address ?>, <?= $model->region ?>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <p>
+                                <?= Html::a(' &nbsp; &nbsp; &nbsp; Detail &nbsp; &nbsp; &nbsp; ', ['/site/store', 'SearchStoreForm[search]' => $model->name], [
+                                    'class' => 'btn btn-secondary',
+                                    'style' => 'margin:14px'
+                                ]) ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
+        <?php endforeach ?>
     </div>
 
 </div>

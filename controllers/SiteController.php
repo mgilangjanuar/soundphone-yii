@@ -141,17 +141,27 @@ class SiteController extends Controller
     {
         $models = Store::find()->all();
         $model = new SearchStoreForm();
+        $query = Store::find();
         if ($model->load(Yii::$app->request->get())) {
-            $models = Store::find()
-                ->where(['like', 'name', $model->search])
-                ->orWhere(['like', 'address', $model->search])
-                ->orWhere(['like', 'state', $model->search])
-                ->orWhere(['like', 'region', $model->search])
-                ->all();
+            if ($model->search) {
+                $query = Store::find()
+                    ->where(['like', 'name', $model->search])
+                    ->orWhere(['like', 'address', $model->search])
+                    ->orWhere(['like', 'state', $model->search]);
+                $models = $query->all();
+            } elseif ($model->state) {
+                $query = Store::find()
+                    ->where(['state' => $model->state]);
+                $models = $query->all();
+            }
         }
+
         return $this->render('store', [
             'models' => $models,
-            'model' => $model
+            'model' => $model,
+            'states' => Store::getDataState(),
+            'locations' => Store::getLocations($models),
+            'listGroupModels' => Store::findGroupAll($query),
         ]);
     }
 

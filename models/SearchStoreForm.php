@@ -12,6 +12,7 @@ class SearchStoreForm extends Model
 {
     public $search;
 
+    public $state;
 
     /**
      * @return array the validation rules.
@@ -19,7 +20,7 @@ class SearchStoreForm extends Model
     public function rules()
     {
         return [
-            [['search'], 'safe'],
+            [['search', 'state'], 'safe'],
         ];
     }
 }

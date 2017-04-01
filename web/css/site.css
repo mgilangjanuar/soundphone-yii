@@ -355,6 +355,24 @@ a.desc:after {
     background-color: #03afef;
 }
 
+.btn.btn-alternate {
+    color: #fff;
+    background-color: #03afef;
+    border-color: #03afef;
+    font-family: MyriadSemiboldSemiExt;
+    border-radius: 100px;
+    border-width: 3px;
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 6px 17px;
+}
+
+.btn.btn-alternate:hover {
+    color: #004d89;
+    background-color: transparent;
+}
+
 .img-product {
     filter: drop-shadow(0 10px 5px rgba(0,0,0,0.25));
     margin: 0 auto;

@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "store".
@@ -47,5 +48,37 @@ class Store extends \yii\db\ActiveRecord
             'name' => 'Name',
             'address' => 'Address',
         ];
+    }
+
+    public static function getDataState()
+    {
+        $array = Store::find()->orderBy('state')->asArray()->all();
+        return ArrayHelper::map($array, 'state', 'state');
+    }
+
+    public static function getLocations($models = null)
+    {
+        $results = [];
+        $query = $models ? $models : Store::find()->all();
+        foreach ($query as $model) {
+            $results[] = [
+                'location' => [
+                    'address' => $model->address,
+                    'country' => 'Indonesia',
+                ],
+                'htmlContent' => '<h4>'.$model->name.'</h4><p>'.$model->address.'</p>'
+            ];
+        }
+        return $results;
+    }
+
+    public static function findGroupAll($query = null)
+    {
+        $results = [];
+        $query = ($query ? $query : Store::find())->orderBy('state')->all();
+        foreach ($query as $model) {
+            $results[$model->state][] = $model;
+        }
+        return $results;
     }
 }
