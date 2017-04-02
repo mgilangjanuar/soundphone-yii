@@ -59,49 +59,38 @@ $this->registerCss("
                         </div>
                     </div>
                 </div>
+                <br />
+
+                <div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">User Navigation</div>
+                        <div class="panel-body">
+                            <?php if (Yii::$app->user->isGuest): ?>
+                                <p>
+                                    <i class="fa fa-sign-in"></i> &nbsp; 
+                                    <?= Html::a('Log In', ['/site/login'], ['class' => 'black']) ?>
+                                </p>
+                            <?php else: ?>
+                                <p>
+                                    <i class="fa fa-newspaper-o"></i> &nbsp; 
+                                    <?= Html::a('Create News', ['/news/create'], ['class' => 'black']) ?>
+                                </p>
+                                <p>
+                                    <i class="fa fa-sign-out"></i> &nbsp; 
+                                    <?= Html::a('Sign Out ('.Yii::$app->user->identity->username.')', ['/site/logout'], [
+                                        'class' => 'black',
+                                        'data' => [
+                                            'method' => 'post'
+                                        ]
+                                    ]) ?>
+                                </p>
+                            <?php endif ?>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-8">
-                <div class="panel panel-primary">
-                    <div class="panel-heading panel-img">
-                        <?= Html::img('@web/web/img/newspic.png', ['class' => 'img-responsive img-full']) ?>
-                    </div>
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                    <div class="panel-footer grey">
-                        <p class="pull-right">
-                            <span class="cyan"><i class="fa fa-comment"></i> &nbsp; Comments</span>
-                            &nbsp; &nbsp; &nbsp;
-                            10
-                        </p>
-                        <p class="">
-                            <i class="fa fa-clock-o"></i> Feb 10, 2017
-                        </p>
-                    </div>
-                </div>
-                <br />
-                
-                <div class="panel panel-primary">
-                    <div class="panel-heading panel-img">
-                        <?= Html::img('@web/web/img/without-text.png', ['class' => 'img-responsive img-full']) ?>
-                    </div>
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                    <div class="panel-footer grey">
-                        <p class="pull-right">
-                            <span class="cyan"><i class="fa fa-comment"></i> &nbsp; Comments</span>
-                            &nbsp; &nbsp; &nbsp;
-                            10
-                        </p>
-                        <p class="">
-                            <i class="fa fa-clock-o"></i> Feb 10, 2017
-                        </p>
-                    </div>
-                </div>
-                <!--<?= ListView::widget([
+                <?= ListView::widget([
                     'dataProvider' => $models,
                     'summary' => '',
                     'itemView' => function ($model, $key, $index, $widget) {
@@ -113,7 +102,7 @@ $this->registerCss("
                         'class' => ScrollPager::className(),
                         'noneLeftText' => ''
                     ]
-                ]) ?>-->
+                ]) ?>
             </div>
         </div>
     </div>

@@ -42,21 +42,24 @@ class NewsController extends Controller
         ];
     }
 
-    public function actionIndex()
+    public function actionIndex($id = null)
     {
         $model = new SearchPostForm;
         if ($model->load(Yii::$app->request->get())) {
+            $id = null;
             $query = Post::find()
                 ->where(['like', 'title', $model->search])
                 ->orWhere(['like', 'content', $model->search])
                 ->orderBy('created_at desc');
+        } elseif ($id) {
+            $query = Post::find()->where(['id' => $id]);
         } else {
             $query = Post::find()->orderBy('created_at desc');
         }
         $models = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
-                'pageSize' => 6
+                'pageSize' => 4
             ]
         ]);
         return $this->render('index', [
@@ -65,18 +68,11 @@ class NewsController extends Controller
         ]);
     }
 
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findPost($id)
-        ]);
-    }
-
     public function actionCreate()
     {
         $model = new Post;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index', 'id' => $model->id]);
         }
         return $this->render('create', [
             'model' => $model
@@ -87,7 +83,7 @@ class NewsController extends Controller
     {
         $model = $this->findPost($id);
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index', 'id' => $model->id]);
         }
         return $this->render('update', [
             'model' => $model

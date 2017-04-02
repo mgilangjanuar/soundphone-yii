@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\bootstrap\ActiveForm;
 
 $this->title = 'Soundphone S2'
 ?>
@@ -99,6 +100,39 @@ $this->title = 'Soundphone S2'
                         Micro USB/ 2 SIM card slot/ 3.5mm standard port Earphone/ 4 Pin charger
                     </p>
                 </div>
+            </div>
+        </div>
+
+        <br /><br />
+        <div>
+            <p class="with-underline text-center lead">
+                <?= Html::a('<span class="cyan">Contact Us</span>', ['#'], ['class' => 'btn h2 btn-tab-contact-us']) ?>
+            </p>
+            <br />
+        </div>
+
+        <div>
+            <p>
+                <?= Html::img('@web/web/img/hp-contact-us-frame.png', ['class' => 'img-responsive img-center btn-img-contact-us hide']) ?>
+            </p>
+            <div class="contact-us-form hide">
+                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+
+                    <?= $form->field($model, 'name')->textInput(['placeholder' => 'Name'])->label(false)->error(false) ?>
+                    
+                    <?= $form->field($model, 'email')->textInput(['placeholder' => 'Email'])->label(false)->error(false) ?>
+                    
+                    <?= $form->field($model, 'phone')->textInput(['placeholder' => 'Phone Number'])->label(false)->error(false) ?>
+                    
+                    <?= $form->field($model, 'subject')->textInput(['placeholder' => 'Subject'])->label(false)->error(false) ?>
+                    
+                    <?= $form->field($model, 'body')->textInput(['placeholder' => 'Message'])->label(false)->error(false) ?>
+                    
+                    <div class="form-group text-center">
+                        <?= Html::submitButton('<span class="white">&nbsp; &nbsp; Send &nbsp; &nbsp;</span>', ['class' => 'btn btn-secondary', 'name' => 'contact-button']) ?>
+                    </div>
+
+                <?php ActiveForm::end(); ?>
             </div>
         </div>
     </section>
