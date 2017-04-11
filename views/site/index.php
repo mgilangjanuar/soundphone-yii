@@ -12,13 +12,13 @@ $this->registerJsFile('@web/web/libs/jquery.bxslider/jquery.bxslider.min.js', ['
 
     <ul class="bxslider vertical">
         <li>
-            <?= Html::img('@web/web/img/home-revisi.png', ['class' => 'img-responsive']) ?>
+            <?= Html::img('@web/web/img/Banner 001.png', ['class' => 'img-responsive']) ?>
         </li>
         <li>
-            <?= Html::img('@web/web/img/home-revisi.png', ['class' => 'img-responsive']) ?>
+            <?= Html::img('@web/web/img/Banner 002.png', ['class' => 'img-responsive']) ?>
         </li>
         <li>
-            <?= Html::img('@web/web/img/home-revisi.png', ['class' => 'img-responsive']) ?>
+            <?= Html::img('@web/web/img/Banner 003.png', ['class' => 'img-responsive']) ?>
         </li>
     </ul>
 
