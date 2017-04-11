@@ -75,8 +75,8 @@ class Store extends \yii\db\ActiveRecord
     public static function findGroupAll($query = null)
     {
         $results = [];
-        $query = ($query ? $query : Store::find())->orderBy('state')->all();
-        foreach ($query as $model) {
+        $query = $query ? $query : Store::find();
+        foreach ($query->orderBy('state')->all() as $model) {
             $results[$model->state][] = $model;
         }
         return $results;
